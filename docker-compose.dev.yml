@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - '6379:6379'
+
+  users-api:
+    build: ./users-api
+    ports:
+      - '8080:8080'
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+
+  todos-api:
+    build: ./todos-api
+    ports:
+      - '3000:3000'
+    depends_on:
+      - redis
+
+  auth-api:
+    build: ./auth-api
+    ports:
+      - '4000:4000'
+
+  log-processor:
+    build: ./log-message-processor
+    depends_on:
+      - redis
+
+  frontend:
+    build: ./frontend
+    ports:
+      - '8081:8081'
