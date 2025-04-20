@@ -1,0 +1,14 @@
+FROM node:8.17.0
+
+WORKDIR /app
+COPY . .
+
+ENV TODO_API_PORT=8082
+ENV REDIS_HOST=redis
+ENV REDIS_PORT=6379
+ENV REDIS_CHANNEL=log_channel
+ENV JWT_SECRET=PRFT
+
+RUN npm install
+
+CMD ["npm", "start"]
