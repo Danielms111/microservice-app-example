@@ -10,4 +10,7 @@ WORKDIR /app
 ENV JWT_SECRET=PRFT
 ENV SERVER_PORT=8083
 COPY --from=build /app/target/*.jar app.jar
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", 
+     "--add-opens=java.base/java.lang=ALL-UNNAMED", 
+     "-jar", 
+     "app.jar"]
