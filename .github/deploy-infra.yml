@@ -1,0 +1,14 @@
+name: Infra Deploy
+
+on:
+  push:
+    branches: [infra/main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy Infra
+        run: |
+          docker-compose -f docker-compose.dev.yml up -d
