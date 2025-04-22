@@ -47,4 +47,6 @@ public class User {
     public void setRole(UserRole role) {
         this.role = role;
     }
+
+    system.out.print("PROBANDO PIPELINE 1");
 }
