@@ -49,7 +49,7 @@ if __name__ == '__main__':
                     flags=None
                 ),
                 span_name='save_log',
-                transport_handler=http_transport,agdgs
+                transport_handler=http_transport,
                 sample_rate=100
             ):
                 log_message(message)
@@ -58,5 +58,4 @@ if __name__ == '__main__':
             log_message(message)
 
 
-agsffgag
 
