@@ -1,4 +1,4 @@
-# Frontend - Testing
+# Frontend
 
 UI for sample distributed TODO application.
 
