@@ -1,5 +1,5 @@
-FROM node:8.17.0
-
+FROM node:10-alpine
+RUN apk add --no-cache python make g++
 WORKDIR /app
 COPY . .
 
@@ -10,6 +10,6 @@ ENV TODOS_API_ADDRESS=http://todos-api:8082
 RUN npm install
 RUN npm run build
 
-# Servir la app estática con `serve`
-RUN npm install -g serve
+RUN npm install -g serve@11.3.2
+
 CMD ["serve", "-s", "dist", "-l", "8081"]
