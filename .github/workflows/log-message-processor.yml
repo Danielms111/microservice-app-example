@@ -17,3 +17,4 @@ jobs:
       - run: |
           cd log-message-processor
           pip install -r requirements.txt
+          python -m py_compile main.py
