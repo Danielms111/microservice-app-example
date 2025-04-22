@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy Infra
+
+      - name: Instalar Docker y Docker Compose
         run: |
-          docker-compose -f docker-compose.dev.yml up -d
+          sudo apt-get update
+          sudo apt-get install docker-compose -y
+
+      - name: Desplegar Infraestructura
+        run: docker-compose -f docker-compose.dev.yml up -d
