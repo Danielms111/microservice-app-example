@@ -48,5 +48,4 @@ public class User {
         this.role = role;
     }
 
-    system.out.print("PROBANDO PIPELINE 1");
 }
