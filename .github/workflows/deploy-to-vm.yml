@@ -25,5 +25,5 @@ jobs:
             git clone https://github.com/Danielms111/microservice-app-example.git
             cd microservice-app-example
             git pull origin master
-            docker-compose -f docker-compose.dev.yml down
-            docker-compose -f docker-compose.dev.yml up -d --build
+            sudo docker-compose -f docker-compose.dev.yml down
+            sudo docker-compose -f docker-compose.dev.yml up -d --build
