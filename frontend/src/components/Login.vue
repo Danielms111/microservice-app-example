@@ -22,7 +22,7 @@
                                   type='text'
                                   name='username'
                                   class='form-control'
-                                  placeholder='johnd'
+                                  placeholder='Carlos'
                                   v-model='credentials.username'
                                   required
                                   autofocus
@@ -42,7 +42,7 @@
                                   type='password'
                                   name='password'
                                   class='form-control'
-                                  placeholder='foo'
+                                  placeholder='Password'
                                   v-model='credentials.password'
                                   required>
                             </div>
