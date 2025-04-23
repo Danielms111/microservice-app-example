@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.VM_PASSWORD }}
           port: 22
           script: |
-            rm -rf microservice-app-example
+            sudo rm -rf microservice-app-example
             git clone https://github.com/Danielms111/microservice-app-example.git
             cd microservice-app-example
             git pull origin master
