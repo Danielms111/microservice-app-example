@@ -3,6 +3,7 @@
 UI for sample distributed TODO application.
 
 ## Configuration
+
 - `PORT` - a port the application binds to 
 - `AUTH_API_ADDRESS` - address of `auth-api` for authentication
 - `TODOS_API_ADDRESS` - address of `todos-api` for TODO CRUD
