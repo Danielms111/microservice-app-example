@@ -1,7 +1,17 @@
 name: Python CI
 
 on:
+  pull_request:
+    branches:
+      - master
+      - dev
+    paths:
+      - 'log-message-processor/**'
+
   push:
+    branches:
+      - feature/**
+      - hotfix/**
     paths:
       - 'log-message-processor/**'
 
