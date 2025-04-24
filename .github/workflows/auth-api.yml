@@ -1,7 +1,17 @@
 name: CI - Auth API
 
 on:
+  pull_request:
+    branches:
+      - master
+      - dev
+    paths:
+      - 'auth-api/**'
+
   push:
+    branches:
+      - feature/**
+      - hotfix/**
     paths:
       - 'auth-api/**'
 
