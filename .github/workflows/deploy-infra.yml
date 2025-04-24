@@ -1,9 +1,21 @@
 name: Infra Deploy
 
 on:
-  push:
-    branches: [infra/master]
+  pull_request:
+    branches:
+      - infra/master
+      - infra/dev
+    paths:
+      - 'docker-compose.dev.yml'
+      - '.github/workflows/infra.yml'
 
+  push:
+    branches:
+      - infra/feature/**
+      - infra/hotfix/**
+    paths:
+      - 'docker-compose.dev.yml'
+      - '.github/workflows/infra.yml'
 jobs:
   deploy:
     runs-on: ubuntu-latest
