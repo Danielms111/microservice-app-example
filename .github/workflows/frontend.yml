@@ -1,7 +1,17 @@
 name: Frontend CI
 
 on:
+  pull_request:
+    branches:
+      - master
+      - dev
+    paths:
+      - 'frontend/**'
+
   push:
+    branches:
+      - feature/**
+      - hotfix/**
     paths:
       - 'frontend/**'
 
