@@ -7,7 +7,7 @@
                 <div class='row'>
                     <div class='col-md-3'></div>
                     <div class='col-md-6'>
-                        <h2>Log In</h2>
+                        <h2>Log In nuevoo</h2>
                         <hr>
                     </div>
                 </div>
