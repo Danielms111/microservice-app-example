@@ -7,7 +7,7 @@
                 <div class='row'>
                     <div class='col-md-3'></div>
                     <div class='col-md-6'>
-                        <h2>Please Login</h2>
+                        <h2>Iniciar Sesion</h2>
                         <hr>
                     </div>
                 </div>
@@ -15,14 +15,14 @@
                     <div class='col-md-3'></div>
                     <div class='col-md-6'>
                         <div class='form-group has-danger'>
-                            <label class='sr-only' for='username'>Login</label>
+                            <label class='sr-only' for='username'>Username</label>
                             <div class='input-group mb-2 mr-sm-2 mb-sm-0'>
                                 <div class='input-group-addon' style='width: 2.6rem'><i class='fa fa-at'></i></div>
                                 <input
                                   type='text'
                                   name='username'
                                   class='form-control'
-                                  placeholder='johnd'
+                                  placeholder='Carlos'
                                   v-model='credentials.username'
                                   required
                                   autofocus
@@ -35,14 +35,14 @@
                     <div class='col-md-3'></div>
                     <div class='col-md-6'>
                         <div class='form-group'>
-                            <label class='sr-only' for='password'>Password</label>
+                            <label class='sr-only' for='password'>Contraseña</label>
                             <div class='input-group mb-2 mr-sm-2 mb-sm-0'>
                                 <div class='input-group-addon' style='width: 2.6rem'><i class='fa fa-key'></i></div>
                                 <input
                                   type='password'
                                   name='password'
                                   class='form-control'
-                                  placeholder='foo'
+                                  placeholder='Password'
                                   v-model='credentials.password'
                                   required>
                             </div>
@@ -62,7 +62,7 @@
                 <div class='row' style='padding-top: 1rem'>
                     <div class='col-md-3'></div>
                     <div class='col-md-6'>
-                        <button type='submit' class='btn btn-success'><i class='fa fa-sign-in'></i> Login</button>
+                        <button type='submit' class='btn btn-danger'><i class='fa fa-sign-in'></i> Login</button>
                     </div>
                 </div>
             </form>
