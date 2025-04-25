@@ -33,7 +33,7 @@ variable "network_interface_name" {
 }
 
 variable "nsg_name" {
-    default = "devops-nsg"
+    default = "devops-new-nsg"
 }
 
 variable "vm_name" {
