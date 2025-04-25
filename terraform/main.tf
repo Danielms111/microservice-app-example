@@ -12,7 +12,6 @@ resource "azurerm_virtual_network" "vnet" {
     address_space       = [var.virtual_network_address_space]
     location            = var.location
     resource_group_name = var.resource_group_name
-
     depends_on = [azurerm_resource_group.rg]
 
 }
