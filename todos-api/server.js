@@ -62,3 +62,5 @@ routes(app, {tracer, redisClient, logChannel})
 app.listen(port, function () {
   console.log('todo list RESTful API server started on: ' + port)
 })
+
+console.log('PROBANDO PIPELINE 1')
