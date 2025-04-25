@@ -5,6 +5,12 @@ services:
     ports:
       - '6379:6379'
 
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+    restart: unless-stopped
+
   users-api:
     build: ./users-api
     ports:
@@ -23,6 +29,7 @@ services:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - REDIS_CHANNEL=log_channel
+      - ZIPKIN_URL=http://zipkin:9411/api/v2/spans
     depends_on:
       - redis
 
@@ -52,6 +59,9 @@ services:
       - PORT=8081
       - AUTH_API_ADDRESS=http://auth-api:8000
       - TODOS_API_ADDRESS=http://todos-api:8082
+      - ZIPKIN_URL=http://zipkin:9411/api/v2/spans
+    depends_on:
+      - zipkin
 
   nginx:
     image: nginx:latest
