@@ -1,7 +1,17 @@
 name: NodeJS CI
 
 on:
+  pull_request:
+    branches:
+      - master
+      - dev
+    paths:
+      - 'todos-api/**'
+
   push:
+    branches:
+      - feature/**
+      - hotfix/**
     paths:
       - 'todos-api/**'
 

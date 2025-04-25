@@ -1,10 +1,10 @@
 name: Deploy to Azure VM
 
 on:
-  push:
+  pull_request:
     branches:
-      - master  
-
+      - master
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
