@@ -1,9 +1,11 @@
 name: Terraform Workflow
 
 on:
-  pull_request:
+  push:
     branches:
       - master
+    paths:
+      - 'terraform/**'
 
 jobs:
   terraform:
