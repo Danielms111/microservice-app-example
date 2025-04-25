@@ -1,8 +1,3 @@
-variable "subscription_id" {
-    description = "ID de la suscripción de Azure"
-    type        = string
-}
-
 variable "resource_group_name" {
     type    = string
     default = "devops-rg"
