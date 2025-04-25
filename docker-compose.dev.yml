@@ -52,3 +52,25 @@ services:
       - PORT=8081
       - AUTH_API_ADDRESS=http://auth-api:8000
       - TODOS_API_ADDRESS=http://todos-api:8082
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - auth-api
+      - todos-api
+      - users-api
+
+  haproxy:
+    image: haproxy:latest
+    volumes:
+      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    ports:
+      - "81:81"
+    depends_on:
+      - todos-api
+
