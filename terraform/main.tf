@@ -196,8 +196,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
 terraform {
   backend "azurerm" {
     resource_group_name  = "state_terraform"
-    storage_account_name = "terraformstatestorage"
-    container_name       = "terraformstate"
+    storage_account_name = "diegomuesestfs"
+    container_name       = "diegomuesestf"
     key                  = "terraform.tfstate"
   }
 }
