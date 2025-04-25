@@ -193,3 +193,12 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
     depends_on = [azurerm_network_interface.nic]
 }
+
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "state_terraform"
+    storage_account_name = "terraformstatestorage"
+    container_name       = "terraformstate"
+    key                  = "terraform.tfstate"
+  }
+}
